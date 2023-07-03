@@ -29,18 +29,18 @@ function createBook(){
   updateStorage();
 }
 function display(obj){
-  let aBook = document.createElement('div');
-  aBook.id = "a"+Date.now();
-  let aBookId = aBook.id;
+  let oneBook = document.createElement('div');
+  oneBook.id = "a"+Date.now();
+  let bookId = oneBook.id;
   let buttonId = "a"+Date.now();
-  aBook.innerHTML = `
+  oneBook.innerHTML = `
   <p>${obj.title}</p>
   <p>${obj.author}</p>
   <button id="${buttonId}">Remove</button>
   `;
-  booksDiv.appendChild(aBook);
+  booksDiv.appendChild(oneBook);
   let removeBtn = document.querySelector('#'+buttonId);
-  removeBtn.addEventListener('click',(evt) =>{evt.stopPropagation();removeBook(aBookId,obj);} );
+  removeBtn.addEventListener('click',(evt) =>{evt.stopPropagation();removeBook(bookId,obj);} );
 }
 function removeBook(bookId,obj){
   books.splice(books.indexOf(obj),1)
