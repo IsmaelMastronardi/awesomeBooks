@@ -1,0 +1,18 @@
+.bookAdder {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.addBtn {
+  width: 40px;
+}
+
+.removeBtnBorder {
+  width: 300px;
+  height: 2px;
+  background-color: black;
+  margin-top: 10px;
+}
